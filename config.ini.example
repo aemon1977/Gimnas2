@@ -7,7 +7,8 @@ database=gimnas
 
 [updates]
 current_version=2025.11.24
-feed_url=https://raw.githubusercontent.com/aemon1977/Gimnas2/main/updates.json
+; Fitxer version.ini publicat al GitHub (raw). Actualitza'l a cada release.
+feed_url=https://raw.githubusercontent.com/aemon1977/Gimnas2/master/version.ini
 auth_token=
 
 [license]

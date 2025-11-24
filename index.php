@@ -322,6 +322,30 @@ $conn->close();
     .status { margin: 6px 0 8px; font-weight: 600; font-size: 13px; }
     .status.ok { color: #10b981; }
     .status.error { color: #ef4444; }
+<<<<<<< HEAD
+=======
+    .update-fab {
+        position: fixed;
+        right: 32px;
+        bottom: 32px;
+        background: var(--accent);
+        color: #fff;
+        border: none;
+        border-radius: 32px;
+        padding: 14px 26px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 16px 32px rgba(230,57,70,0.28);
+        z-index: 1200;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .update-fab:hover {
+        background: var(--accent-dark);
+    }
+>>>>>>> 03a628c (Primera versió)
     @media (max-width: 768px) {
         body { flex-direction: column; }
         .sidebar { width: 100%; position: relative; min-height: auto; }
