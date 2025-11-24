@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir Archivos</title>
+</head>
+<body>
+    <h2>Subir Archivo</h2>
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        <label for="directory">Selecciona una carpeta existente:</label>
+        <select name="directory" id="directory">
+            <option value="">Seleccionar carpeta (opcional)</option>
+            <?php
+            // Mostrar las carpetas existentes en el directorio actual
+            $dirs = glob('*', GLOB_ONLYDIR); // Filtrar solo los directorios
+            foreach ($dirs as $dir) {
+                echo "<option value=\"$dir\">$dir</option>";
+            }
+            ?>
+        </select>
+        <br><br>
+        <label for="new_folder">Crear nueva carpeta (opcional):</label>
+        <input type="text" name="new_folder" id="new_folder" placeholder="Nombre de nueva carpeta">
+        <br><br>
+        <label for="file">Selecciona un archivo:</label>
+        <input type="file" name="file" id="file" required>
+        <br><br>
+        <input type="submit" value="Subir Archivo">
+    </form>
+</body>
+</html>

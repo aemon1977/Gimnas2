@@ -1,0 +1,24 @@
+﻿name: Build release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: ""Versió (p.ex. 2025.11.30)""
+        required: true
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Crear zip
+        run: git archive --format=zip --output gimnas_\$(`${{ github.event.inputs.version }}`).zip HEAD
+      - name: Publicar release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v\$(`${{ github.event.inputs.version }}`)
+          name: Release \$(`${{ github.event.inputs.version }}`)
+          files: gimnas_\$(`${{ github.event.inputs.version }}`).zip
+        env:
+          GITHUB_TOKEN: \$(`${{ secrets.GITHUB_TOKEN }}`)

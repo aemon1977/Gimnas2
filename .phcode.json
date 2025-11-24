@@ -1,0 +1,7 @@
+{
+    "livePreviewUseDevServer": true,
+    "livePreviewServerURL": "http://localhost:8080/",
+    "livePreviewServerProjectPath": "/gimnas",
+    "livePreviewHotReloadSupported": true,
+    "livePreviewFramework": "Docusaurus"
+}
