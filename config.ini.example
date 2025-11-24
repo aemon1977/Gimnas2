@@ -6,7 +6,7 @@ password=
 database=gimnas
 
 [updates]
-current_version=2025.11.23
+current_version=2025.11.24
 feed_url=https://raw.githubusercontent.com/aemon1977/Gimnas2/main/updates.json
 auth_token=
 
